@@ -8,31 +8,35 @@ Equalizer, sound mixer and audio dashboard for Windows 10/11 and macOS 14.4+, bu
 * 10-band musical EQ per app and per device: **Sub, Bass, Lows, Body, Mud, Mids, Claps, Presence, Hats, Air**, plus a full parametric mode (bell, shelves, cuts, notch, up to 16 bands), 12 presets, your own presets, clip guard, stereo width
 * Playback only. Nothing is recorded or written to disk except your settings
 
-## Install
+## Download
 
-| File | Use |
-|---|---|
-| `OmniMix_0.1.0_x64-setup.exe` | Installer (per-user, no admin) |
-| `OmniMix.exe` | Portable, run from any folder |
-| `omnimix-probe.exe` | Diagnostics and self-test |
+**[Latest release](https://github.com/Aristotlev/omnimix/releases/latest)**
 
-The builds are not code-signed yet, so SmartScreen shows "Windows protected your PC". Click **More info > Run anyway**.
+| Platform | File | Requires |
+|---|---|---|
+| **Windows** | `OmniMix_x.y.z_x64-setup.exe` | Windows 10 (2004+) or Windows 11, 64-bit |
+| **macOS** | `OmniMix_x.y.z_universal.dmg` | macOS 14.4 Sonoma or newer, Apple Silicon or Intel |
 
-Needs the WebView2 runtime, already present on Windows 11 and current Windows 10. The installer fetches it if missing.
+**Windows:** run the `.exe`. It installs per user, no admin needed. The installer is not code-signed yet, so SmartScreen may show "Windows protected your PC": click **More info > Run anyway**.
 
-## macOS (14.4 Sonoma or newer)
+**macOS:** open the `.dmg` and drag **OmniMix** into **Applications**. The app is not notarized yet, so the first launch is blocked: open **System Settings > Privacy & Security** and click **Open Anyway**.
 
-```bash
-bash build-mac.sh          # installs Rust if missing, builds OmniMix.app + .dmg into dist-mac/
-```
+**Updates are automatic.** OmniMix checks on launch and every 6 hours, shows "OmniMix x.y.z is available", and installs and restarts with one click. Every update is signed and verified before it installs. Settings > Updates > **Check now** checks on demand.
 
-* First time an app is processed, macOS asks to allow OmniMix to record system audio. Allow it, or processed apps go silent. Toggle later in System Settings > Privacy & Security > Screen & System Audio Recording.
-* macOS has no per-app mixer, so app volume, app mute and L/R mute run through the OmniMix engine: changing them taps that app (silent original, processed copy plays). Back at 100% and unmuted, the app plays untouched again.
+## Windows notes
+
+* Per-app and device EQ need a second active output to park the original audio on (HDMI audio from a monitor, unused onboard speakers, or the free VB-CABLE). OmniMix picks one automatically, changeable in Settings. Volume, mute and channel control work without it.
+* Needs the WebView2 runtime, already on Windows 11 and current Windows 10. The installer fetches it if missing.
+
+## macOS notes
+
+* The first time an app is processed, macOS asks to allow OmniMix to record system audio. Allow it, or processed apps go silent. Change it later in System Settings > Privacy & Security > Screen & System Audio Recording.
+* macOS has no per-app mixer, so app volume, app mute and L/R mute run through the OmniMix engine. Back at 100% and unmuted, the app plays untouched again.
 * Meters show for anything OmniMix processes. macOS exposes no meters for untouched apps or outputs.
-* Connection types come from Core Audio: USB, Bluetooth (stereo / hands-free / LE), HDMI, DisplayPort, Thunderbolt, AirPlay, built-in speakers vs headphone jack, virtual. macOS does not report USB-C vs USB-A, so both show as USB.
-* If OmniMix quits or crashes, macOS removes its taps and every app plays normally. Nothing to restore.
+* Connection types: USB, Bluetooth (stereo / hands-free / LE), HDMI, DisplayPort, Thunderbolt, AirPlay, built-in speakers vs headphone jack, virtual. macOS does not report USB-C vs USB-A, so both show as USB.
+* If OmniMix quits or crashes, macOS removes its taps and every app plays normally.
 
-## Verify on your PC (2 minutes)
+## Diagnostics (Windows, from source builds)
 
 ```powershell
 .\omnimix-probe.exe list       # every output, connection type, every app
@@ -88,7 +92,13 @@ npx tauri build                      # -> src-tauri\target\release\bundle\nsis\
 cargo build --release -p omnimix-probe
 ```
 
-Linux cross-build to Windows (what produced these binaries):
+macOS from source:
+
+```bash
+bash build-mac.sh          # installs Rust if missing, builds OmniMix.app + .dmg into dist-mac/
+```
+
+Linux cross-build to Windows:
 
 ```bash
 sudo apt install mingw-w64 nsis rustc-1.97 cargo-1.97 rust-1.97-src
