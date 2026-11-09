@@ -1,0 +1,12 @@
+[package]
+name = "omnimix-core"
+description = "OS-agnostic audio mixer core: device/source model, EQ + DSP engine, routing graph, state, backend contract"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+crate-type = ["rlib", "staticlib", "cdylib"]
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true

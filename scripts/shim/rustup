@@ -1,0 +1,9 @@
+#!/bin/sh
+# Build-env shim: the distro toolchain builds std for Windows via -Zbuild-std,
+# so report the Windows target as available to tools that ask rustup.
+if [ "$1" = "target" ] && [ "$2" = "list" ]; then
+  echo "x86_64-unknown-linux-gnu (installed)"
+  echo "x86_64-pc-windows-gnu (installed)"
+  exit 0
+fi
+exec /root/.cargo/bin/rustup "$@"

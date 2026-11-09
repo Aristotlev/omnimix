@@ -1,0 +1,12 @@
+[package]
+name = "omnimix-macos"
+description = "macOS 14.4+ backend for OmniMix (Core Audio HAL, process taps, private aggregate devices)"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+omnimix-core = { path = "../omnimix-core" }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.6"
+base64 = "0.22"

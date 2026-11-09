@@ -1,0 +1,10 @@
+target/
+node_modules/
+app/dist/
+app/src-tauri/gen/
+dist-mac/
+.DS_Store
+*.key
+*.key.password
+*.pem
+.env

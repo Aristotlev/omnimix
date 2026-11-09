@@ -1,0 +1,2986 @@
+{
+  "version": "0.1.0",
+  "platform": {
+    "os": "Demo rig on linux",
+    "backend": "Simulated (demo)",
+    "accent": "#0078D4",
+    "accentDarkUi": "#60CDFF",
+    "darkMode": true
+  },
+  "dsp": {
+    "available": true,
+    "reason": null,
+    "method": "Simulated engine (demo backend)",
+    "needsSink": false,
+    "sink": null,
+    "sinkCandidates": [
+      "mock:bt",
+      "mock:aux",
+      "mock:usb",
+      "mock:hdmi",
+      "mock:cable"
+    ],
+    "latencyMs": 55.0,
+    "streams": 0,
+    "note": null
+  },
+  "devices": [
+    {
+      "id": "mock:usbc",
+      "name": "Headphones (Studio Buds USB-C)",
+      "label": "Headphones",
+      "adapter": "Studio Buds USB-C",
+      "formFactor": "headphones",
+      "connection": {
+        "kind": "usb_c",
+        "detail": [
+          "Port 2",
+          "USB 2.0 Hi-Speed"
+        ],
+        "bus": null,
+        "usb": null,
+        "jackColor": null
+      },
+      "state": "active",
+      "isDefault": true,
+      "isDefaultComms": false,
+      "format": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 24,
+        "channelMask": 0
+      },
+      "volume": 0.48,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "isSink": false,
+      "processing": false,
+      "nickname": null
+    },
+    {
+      "id": "mock:bt",
+      "name": "Headphones (WH Wireless)",
+      "label": "Headphones",
+      "adapter": "WH Wireless",
+      "formFactor": "headphones",
+      "connection": {
+        "kind": "bluetooth",
+        "detail": [
+          "A2DP stereo"
+        ],
+        "bus": null,
+        "usb": null,
+        "jackColor": null
+      },
+      "state": "active",
+      "isDefault": false,
+      "isDefaultComms": true,
+      "format": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "channelMask": 0
+      },
+      "volume": 0.62,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "isSink": false,
+      "processing": false,
+      "nickname": null
+    },
+    {
+      "id": "mock:aux",
+      "name": "Speakers (Realtek(R) Audio)",
+      "label": "Speakers",
+      "adapter": "Realtek(R) Audio",
+      "formFactor": "speakers",
+      "connection": {
+        "kind": "aux",
+        "detail": [
+          "3.5 mm",
+          "Rear panel"
+        ],
+        "bus": null,
+        "usb": null,
+        "jackColor": 41020
+      },
+      "state": "active",
+      "isDefault": false,
+      "isDefaultComms": false,
+      "format": {
+        "sampleRate": 48000,
+        "channels": 6,
+        "bits": 24,
+        "channelMask": 0
+      },
+      "volume": 0.62,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 2,
+          "label": "C",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 3,
+          "label": "LFE",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 4,
+          "label": "SL",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 5,
+          "label": "SR",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "isSink": false,
+      "processing": false,
+      "nickname": null
+    },
+    {
+      "id": "mock:usb",
+      "name": "Speakers (Scarlett USB)",
+      "label": "Speakers",
+      "adapter": "Scarlett USB",
+      "formFactor": "line_out",
+      "connection": {
+        "kind": "usb",
+        "detail": [
+          "Port 5",
+          "USB 2.0 Hi-Speed"
+        ],
+        "bus": null,
+        "usb": null,
+        "jackColor": null
+      },
+      "state": "active",
+      "isDefault": false,
+      "isDefaultComms": false,
+      "format": {
+        "sampleRate": 96000,
+        "channels": 2,
+        "bits": 24,
+        "channelMask": 0
+      },
+      "volume": 0.62,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "isSink": false,
+      "processing": false,
+      "nickname": null
+    },
+    {
+      "id": "mock:hdmi",
+      "name": "LG ULTRAGEAR (NVIDIA High Definition Audio)",
+      "label": "LG ULTRAGEAR",
+      "adapter": "NVIDIA High Definition Audio",
+      "formFactor": "display",
+      "connection": {
+        "kind": "display",
+        "detail": [
+          "HDMI"
+        ],
+        "bus": null,
+        "usb": null,
+        "jackColor": null
+      },
+      "state": "active",
+      "isDefault": false,
+      "isDefaultComms": false,
+      "format": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 24,
+        "channelMask": 0
+      },
+      "volume": 0.62,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "isSink": false,
+      "processing": false,
+      "nickname": null
+    },
+    {
+      "id": "mock:cable",
+      "name": "CABLE Input (VB-Audio Virtual Cable)",
+      "label": "CABLE Input",
+      "adapter": "VB-Audio Virtual Cable",
+      "formFactor": "speakers",
+      "connection": {
+        "kind": "virtual",
+        "detail": [
+          "Virtual"
+        ],
+        "bus": null,
+        "usb": null,
+        "jackColor": null
+      },
+      "state": "active",
+      "isDefault": false,
+      "isDefaultComms": false,
+      "format": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 24,
+        "channelMask": 0
+      },
+      "volume": 0.62,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "isSink": false,
+      "processing": false,
+      "nickname": null
+    },
+    {
+      "id": "mock:front",
+      "name": "Headphones (Realtek(R) Audio)",
+      "label": "Headphones",
+      "adapter": "Realtek(R) Audio",
+      "formFactor": "headphones",
+      "connection": {
+        "kind": "aux",
+        "detail": [
+          "3.5 mm",
+          "Front panel"
+        ],
+        "bus": null,
+        "usb": null,
+        "jackColor": null
+      },
+      "state": "unplugged",
+      "isDefault": false,
+      "isDefaultComms": false,
+      "format": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 24,
+        "channelMask": 0
+      },
+      "volume": 0.62,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "isSink": false,
+      "processing": false,
+      "nickname": null
+    },
+    {
+      "id": "mock:spdif",
+      "name": "Digital Output (Realtek(R) Audio)",
+      "label": "Digital Output",
+      "adapter": "Realtek(R) Audio",
+      "formFactor": "spdif",
+      "connection": {
+        "kind": "spdif",
+        "detail": [
+          "Optical"
+        ],
+        "bus": null,
+        "usb": null,
+        "jackColor": null
+      },
+      "state": "disabled",
+      "isDefault": false,
+      "isDefaultComms": false,
+      "format": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 24,
+        "channelMask": 0
+      },
+      "volume": 0.62,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "isSink": false,
+      "processing": false,
+      "nickname": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "spotify.exe|mock:usbc",
+      "key": "spotify.exe",
+      "name": "Spotify",
+      "exe": "C:\\Program Files\\Spotify\\spotify.exe",
+      "deviceId": "mock:usbc",
+      "physicalDeviceId": "mock:usbc",
+      "pids": [
+        4120
+      ],
+      "sessionIds": [
+        "mock-session-4120"
+      ],
+      "active": true,
+      "system": false,
+      "volume": 0.85,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "status": "direct",
+      "note": null
+    },
+    {
+      "id": "chrome.exe|mock:usbc",
+      "key": "chrome.exe",
+      "name": "Google Chrome",
+      "exe": "C:\\Program Files\\Google Chrome\\chrome.exe",
+      "deviceId": "mock:usbc",
+      "physicalDeviceId": "mock:usbc",
+      "pids": [
+        5208
+      ],
+      "sessionIds": [
+        "mock-session-5208"
+      ],
+      "active": true,
+      "system": false,
+      "volume": 0.7,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "status": "direct",
+      "note": null
+    },
+    {
+      "id": "discord.exe|mock:bt",
+      "key": "discord.exe",
+      "name": "Discord",
+      "exe": "C:\\Program Files\\Discord\\discord.exe",
+      "deviceId": "mock:bt",
+      "physicalDeviceId": "mock:bt",
+      "pids": [
+        6312
+      ],
+      "sessionIds": [
+        "mock-session-6312"
+      ],
+      "active": true,
+      "system": false,
+      "volume": 0.9,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "status": "direct",
+      "note": null
+    },
+    {
+      "id": "steam.exe|mock:aux",
+      "key": "steam.exe",
+      "name": "Steam",
+      "exe": "C:\\Program Files\\Steam\\steam.exe",
+      "deviceId": "mock:aux",
+      "physicalDeviceId": "mock:aux",
+      "pids": [
+        7400
+      ],
+      "sessionIds": [
+        "mock-session-7400"
+      ],
+      "active": false,
+      "system": false,
+      "volume": 1.0,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "status": "direct",
+      "note": null
+    },
+    {
+      "id": "vlc.exe|mock:aux",
+      "key": "vlc.exe",
+      "name": "VLC media player",
+      "exe": "C:\\Program Files\\VLC media player\\vlc.exe",
+      "deviceId": "mock:aux",
+      "physicalDeviceId": "mock:aux",
+      "pids": [
+        8216
+      ],
+      "sessionIds": [
+        "mock-session-8216"
+      ],
+      "active": true,
+      "system": false,
+      "volume": 0.66,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "status": "direct",
+      "note": null
+    },
+    {
+      "id": "system|mock:usbc",
+      "key": "system",
+      "name": "System sounds",
+      "exe": "C:\\Program Files\\System sounds\\system",
+      "deviceId": "mock:usbc",
+      "physicalDeviceId": "mock:usbc",
+      "pids": [
+        0
+      ],
+      "sessionIds": [
+        "mock-session-0"
+      ],
+      "active": false,
+      "system": true,
+      "volume": 0.5,
+      "muted": false,
+      "channels": [
+        {
+          "index": 0,
+          "label": "L",
+          "volume": 1.0,
+          "muted": false
+        },
+        {
+          "index": 1,
+          "label": "R",
+          "volume": 1.0,
+          "muted": false
+        }
+      ],
+      "eq": {
+        "enabled": false,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      },
+      "status": "direct",
+      "note": "System sounds play directly and can't be EQ'd per app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Flat",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "Flat",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bass Boost",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "Bass Boost",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 5.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 6.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 3.5,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Punch",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "Punch",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 1.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 4.5,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": -0.5,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": -2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 3.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 3.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 1.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "V-Shape",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "V-Shape",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 4.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 4.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": -2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": -2.5,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 4.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 3.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Vocal Clarity",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "Vocal Clarity",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": -2.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": -1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": -1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": -2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 3.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 3.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Podcast",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "Podcast",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": -6.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": -3.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": -1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": -2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.5,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 3.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": -1.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Footsteps",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "Footsteps",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": -3.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": -2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": -1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 3.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 4.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cinema",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "Cinema",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 5.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 3.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": -1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 2.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Warm",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "Warm",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 1.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 1.5,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": -0.5,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": -1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": -2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": -2.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bright",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "Bright",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": -1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": -1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": 2.5,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": 3.5,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": 4.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Night",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "Night",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": -3.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": -2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": -2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": -3.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": -3.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Treble Tamer",
+      "builtin": true,
+      "eq": {
+        "enabled": true,
+        "preset": "Treble Tamer",
+        "preampDb": 0.0,
+        "autoPreamp": true,
+        "width": 1.0,
+        "bands": [
+          {
+            "label": "Sub",
+            "kind": "low_shelf",
+            "freq": 40.0,
+            "gainDb": 0.0,
+            "q": 0.71,
+            "enabled": true
+          },
+          {
+            "label": "Bass",
+            "kind": "peak",
+            "freq": 64.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Lows",
+            "kind": "peak",
+            "freq": 125.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Body",
+            "kind": "peak",
+            "freq": 250.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mud",
+            "kind": "peak",
+            "freq": 500.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Mids",
+            "kind": "peak",
+            "freq": 1000.0,
+            "gainDb": 0.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Claps",
+            "kind": "peak",
+            "freq": 2000.0,
+            "gainDb": -1.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Presence",
+            "kind": "peak",
+            "freq": 4000.0,
+            "gainDb": -2.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Hats",
+            "kind": "peak",
+            "freq": 8000.0,
+            "gainDb": -4.0,
+            "q": 1.1,
+            "enabled": true
+          },
+          {
+            "label": "Air",
+            "kind": "high_shelf",
+            "freq": 14000.0,
+            "gainDb": -4.0,
+            "q": 0.71,
+            "enabled": true
+          }
+        ]
+      }
+    }
+  ],
+  "prefs": {
+    "sink": null,
+    "latency": "balanced",
+    "showInactive": true,
+    "closeToTray": true
+  },
+  "icons": {}
+}

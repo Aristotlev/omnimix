@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "OmniMix",
+  "version": "0.1.1",
+  "identifier": "app.omnimix.mixer",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "OmniMix",
+        "width": 1320,
+        "height": 860,
+        "minWidth": 1000,
+        "minHeight": 660,
+        "theme": "Dark",
+        "backgroundColor": "#0E1013"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; connect-src ipc: http://ipc.localhost"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis"
+    ],
+    "publisher": "OmniMix",
+    "copyright": "\u00a9 2026 Aristotle",
+    "category": "Music",
+    "shortDescription": "Per-app and per-device EQ, mixer and audio dashboard",
+    "longDescription": "OmniMix recognises every playback device (USB-C, USB, Bluetooth, AUX, HDMI/DP, S/PDIF) and every app playing audio, with volume, mute, per-channel control and a 10-band musical EQ for each app and each device.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico",
+      "icons/icon.png"
+    ],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "downloadBootstrapper"
+      },
+      "nsis": {
+        "installMode": "currentUser",
+        "displayLanguageSelector": false
+      }
+    },
+    "createUpdaterArtifacts": true
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDc0NzEwRTYyNDk3MUY1QjIKUldTeTlYRkpZZzV4ZEorRFlZYS8wLzFCTDhvL3FXMzkwbXhzTXVWakx1UUxzcm1yclZnYzBEOE4K",
+      "endpoints": [
+        "https://github.com/Aristotlev/omnimix/releases/latest/download/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  }
+}

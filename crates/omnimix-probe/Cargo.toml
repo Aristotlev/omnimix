@@ -1,0 +1,20 @@
+[package]
+name = "omnimix-probe"
+description = "OmniMix diagnostics: device/app inventory and a live self-test of the per-app EQ path"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "omnimix-probe"
+path = "src/main.rs"
+
+[dependencies]
+omnimix-core = { path = "../omnimix-core" }
+serde_json.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+omnimix-windows = { path = "../omnimix-windows" }
+windows = { version = "0.62", features = ["Win32_Foundation", "Win32_Media_Audio", "Win32_System_Com", "Win32_System_Threading"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+omnimix-macos = { path = "../omnimix-macos" }

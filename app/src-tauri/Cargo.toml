@@ -1,0 +1,27 @@
+[package]
+name = "omnimix-app"
+description = "OmniMix desktop app (Tauri shell)"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "OmniMix"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-single-instance = "2"
+tauri-plugin-updater = "2"
+tauri-plugin-process = "2"
+serde.workspace = true
+serde_json.workspace = true
+omnimix-core = { path = "../../crates/omnimix-core" }
+
+[target.'cfg(windows)'.dependencies]
+omnimix-windows = { path = "../../crates/omnimix-windows" }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+omnimix-macos = { path = "../../crates/omnimix-macos" }
