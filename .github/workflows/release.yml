@@ -20,13 +20,13 @@ jobs:
             args: ""
             targets: ""
           - platform: macos-latest
-            args: "--target universal-apple-darwin"
+            args: "--target universal-apple-darwin --bundles app,dmg"
             targets: "aarch64-apple-darwin,x86_64-apple-darwin"
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
