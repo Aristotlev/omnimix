@@ -11,6 +11,9 @@ import json, re, sys
 v = sys.argv[1]
 for p in ['app/src-tauri/tauri.conf.json', 'app/package.json']:
     c = json.load(open(p)); c['version'] = v; json.dump(c, open(p, 'w'), indent=2)
+c = json.load(open('app/package-lock.json')); c['version'] = v
+if '' in c.get('packages', {}): c['packages']['']['version'] = v
+json.dump(c, open('app/package-lock.json', 'w'), indent=2)
 s = open('Cargo.toml').read()
 s = re.sub(r'(\[workspace\.package\][^\[]*?\nversion = ")[^"]+(")', lambda m: m.group(1) + v + m.group(2), s, flags=re.S)
 open('Cargo.toml', 'w').write(s)
