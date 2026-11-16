@@ -70,3 +70,41 @@ jobs:
           prerelease: false
           includeUpdaterJson: true
           args: ${{ matrix.args }}
+
+      # Same file under a name that never changes, so the download buttons always get the latest version.
+      - name: Attach fixed-name download
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "$RUNNER_OS" = "Windows" ]; then
+            SRC=$(ls target/release/bundle/nsis/*-setup.exe | head -n1)
+            NAME=OmniMix-Windows.exe
+          else
+            SRC=$(ls target/universal-apple-darwin/release/bundle/dmg/*.dmg | head -n1)
+            NAME=OmniMix-Mac.dmg
+          fi
+          cp "$SRC" "$NAME"
+          gh release upload "$GITHUB_REF_NAME" "$NAME" --clobber -R "${{ github.repository }}"
+
+      # Download links and first-launch steps on the release page only. The in-app update
+      # banner reads its text from latest.json, which keeps just RELEASE_NOTES.md.
+      - name: Add download links to the release page
+        if: runner.os == 'Windows'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BODY=$(gh release view "$GITHUB_REF_NAME" -R "${{ github.repository }}" --json body --jq .body)
+          case "$BODY" in *OmniMix-Windows.exe*) exit 0 ;; esac
+          {
+            echo '**Download:** [Windows](https://github.com/Aristotlev/omnimix/releases/latest/download/OmniMix-Windows.exe) · [Mac](https://github.com/Aristotlev/omnimix/releases/latest/download/OmniMix-Mac.dmg)'
+            echo
+            echo "$BODY"
+            echo
+            echo 'Windows 10/11: run OmniMix-Windows.exe. If you see "Windows protected your PC", click More info, then Run anyway.'
+            echo "Mac (macOS 14.4+, Apple silicon and Intel): open OmniMix-Mac.dmg and drag OmniMix to Applications. If macOS can't verify the developer, open System Settings → Privacy & Security and click Open Anyway."
+            echo
+            echo 'Already installed? OmniMix updates itself.'
+          } > release-page.md
+          gh release edit "$GITHUB_REF_NAME" -R "${{ github.repository }}" --notes-file release-page.md
